@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.tapclap.ui.audience.AudienceViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f4f7f7"
+        tools:context=".ui.audience.AudienceFragment"
+        tools:ignore="ExtraText">
+
+        <Button
+            android:id="@+id/goodButton"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:backgroundTint="#5da0a2"
+            android:onClick="@{viewModel::onClickGood}"
+            android:text="Good"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.873"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.374"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/badButton"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:backgroundTint="#5da0a2"
+            android:onClick="@{viewModel::onClickBad}"
+            android:text="Bad"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.873"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.678"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/sleepyButton"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:backgroundTint="#5da0a2"
+            android:onClick="@{viewModel::onClickSleepy}"
+            android:text="Sleepy..."
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.13"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.678"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/excellentButton"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:backgroundTint="#5da0a2"
+            android:onClick="@{viewModel::onClickExcellent}"
+            android:text="Excellent!"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.13"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.374"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/excellentTextView"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:text="@{viewModel.excellentValue}"
+            android:textColor="#34495e"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.221"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/goodTextView"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:text="@{viewModel.goodValue}"
+            android:textColor="#34495e"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="@+id/endButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.769"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.511"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/sleepyTextView"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:text="@{viewModel.sleepyValue}"
+            android:textColor="#34495e"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.221"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.784"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/badTextView"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:text="@{viewModel.badValue}"
+            android:textColor="#34495e"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="@+id/endButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.77"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.803"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="344dp"
+            android:layout_height="83dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="ボタンをタップして感情を表します。"
+            android:textSize="28sp"
+            android:typeface="serif"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.067" />
+
+        <Button
+            android:id="@+id/endButton"
+            android:layout_width="360dp"
+            android:layout_height="90dp"
+            android:backgroundTint="#34495e"
+            android:fontFamily="monospace"
+            android:text="終了"
+            android:textSize="30sp"
+            android:typeface="monospace"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.975"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

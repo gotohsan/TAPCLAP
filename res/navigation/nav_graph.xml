@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/titleFragment">
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="com.example.tapclap.ui.title.TitleFragment"
+        android:label="fragment_auth"
+        tools:layout="@layout/fragment_title">
+        <action
+            android:id="@+id/action_titleFragment_to_sessionFragment"
+            app:destination="@id/sessionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sessionFragment"
+        android:name="com.example.tapclap.ui.session.SessionFragment"
+        android:label="fragment_session"
+        tools:layout="@layout/fragment_session">
+        <action
+            android:id="@+id/action_sessionFragment_to_titleFragment"
+            app:destination="@id/titleFragment" />
+        <action
+            android:id="@+id/action_sessionFragment_to_sessionDetailFragment"
+            app:destination="@id/sessionDetailFragment" />
+        <action
+            android:id="@+id/action_sessionFragment_to_sessionCreateFragment"
+            app:destination="@id/sessionCreateFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sessionDetailFragment"
+        android:name="com.example.tapclap.ui.session.SessionDetailFragment"
+        android:label="fragment_session_detail"
+        tools:layout="@layout/fragment_session_detail">
+        <action
+            android:id="@+id/action_sessionDetailFragment_to_audienceFragment"
+            app:destination="@id/audienceFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sessionCreateFragment"
+        android:name="com.example.tapclap.ui.session.SessionCreateFragment"
+        android:label="fragment_session_create"
+        tools:layout="@layout/fragment_session_create">
+        <action
+            android:id="@+id/action_sessionCreateFragment_to_presenterFragment"
+            app:destination="@id/presenterFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/audienceFragment"
+        android:name="com.example.tapclap.ui.audience.AudienceFragment"
+        android:label="fragment_audience"
+        tools:layout="@layout/fragment_audience">
+        <action
+            android:id="@+id/action_audienceFragment_to_sessionFragment"
+            app:destination="@id/sessionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/presenterFragment"
+        android:name="com.example.tapclap.ui.presenter.PresenterFragment"
+        android:label="fragment_presenter"
+        tools:layout="@layout/fragment_presenter">
+        <action
+            android:id="@+id/action_presenterFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.tapclap.ui.presenter.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result">
+        <action
+            android:id="@+id/action_resultFragment_to_sessionFragment"
+            app:destination="@id/sessionFragment" />
+    </fragment>
+
+</navigation>
